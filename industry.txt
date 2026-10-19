@@ -5207,28 +5207,10 @@ technologies = {
 		}
 
 		# GAMEPLAY CHANGE (Millennium Dawn without Economy): the FIRST technology of the
-		# CONSTRUCTION chain now unlocks building of ALL railway levels (rail_way + rail_terminal 1-5)
+		# CONSTRUCTION chain now unlocks building of ALL railway levels (rail_way + rail_terminal)
 		# and infrastructure construction levels 1-5.
-
-		enable_building = {
-			building = infrastructure
-			level = 1
-		}
-
-		enable_building = {
-			building = infrastructure
-			level = 2
-		}
-
-		enable_building = {
-			building = infrastructure
-			level = 3
-		}
-
-		enable_building = {
-			building = infrastructure
-			level = 4
-		}
+		# NOTE: in HoI4 'level' inside enable_building is a MAXIMUM (all levels up to it are
+		# unlocked), so a single block per building with the highest level is enough.
 
 		enable_building = {
 			building = infrastructure
@@ -5242,27 +5224,16 @@ technologies = {
 
 		enable_building = {
 			building = rail_terminal
-			level = 1
-		}
-
-		enable_building = {
-			building = rail_terminal
-			level = 2
-		}
-
-		enable_building = {
-			building = rail_terminal
-			level = 3
-		}
-
-		enable_building = {
-			building = rail_terminal
-			level = 4
-		}
-
-		enable_building = {
-			building = rail_terminal
 			level = 5
+		}
+
+
+		# GAMEPLAY CHANGE: unlock the train archetype itself (parent of every train variant).
+		# In HoI4 an equipment appears in the production/conversion list only when its parent
+		# archetype is unlocked by a researched tech; enabling only the children leaves the
+		# production tab empty.
+		enable_equipments = {
+			train_equipment
 		}
 
 		research_cost = 2
@@ -6672,11 +6643,6 @@ technologies = {
 		path = {
 			leads_to_tech = post_conventional_rail
 			research_cost_coeff = 1
-		}
-
-		enable_building = {
-			building = infrastructure
-			level = 1
 		}
 
 		production_speed_buildings_factor = 0.02
