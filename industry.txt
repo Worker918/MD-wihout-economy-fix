@@ -1,4 +1,4 @@
-# Author(s): AngriestBird, Kalkalash, Doolittle, Simone, Roemer99, Lynx, TheGeneral
+﻿# Author(s): AngriestBird, Kalkalash, Doolittle, Simone, Roemer99, Lynx, TheGeneral
 technologies = {
 
 	# X cords
@@ -6568,7 +6568,19 @@ technologies = {
 	}
 
 	# Infrastructure tree
+	# BUGFIX (Millennium Dawn without Economy): the root tech of the rail/train branch had no
+	# "available" condition, so it was auto-researched at game start. Auto-researched techs are
+	# hidden from the technology tree in HoI4, which removed the whole railway/train chain
+	# (post_conventional_rail -> rail_way/rail_terminal buildings, early_freight_locomotive ->
+	# train_equipment_1, freight_locomotive -> train_equipment_2, modern_freight_locomotive ->
+	# train_equipment_3, train_equipment_4) from the visible research tree.
+	# Adding an always-true "available" block keeps the root tech manually researchable and
+	# restores visibility of the entire infrastructure/railway branch in the tech tree.
 	integrated_transportation_system = {
+
+		available = {
+			always = yes
+		}
 
 		path = {
 			leads_to_tech = post_conventional_rail
