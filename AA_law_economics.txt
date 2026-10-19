@@ -6,7 +6,9 @@ ideas = {
 			cost = 300
 			removal_cost = -1
 			level = 6
-			available = { has_idea = depression }
+			available = {
+				always = yes
+			}
 			on_add = {
 				if = {
 					limit = { NOT = { has_country_flag = disable_cycle_costs } }
@@ -24,6 +26,8 @@ ideas = {
 				productivity_growth_modifier = -4
 				maximum_migration_rate_value = -0.25
 				return_on_investment_modifier = -0.015
+			
+				consumer_goods_factor = -0.15
 			}
 			ai_will_do = { #you never want to be here! VERY BAD
 				factor = 0
@@ -35,20 +39,7 @@ ideas = {
 			removal_cost = -1
 			level = 5
 			available = {
-				OR = {
-					has_idea = depression
-					has_idea = recession
-				}
-				if = {
-					limit = { original_tag = BRA }
-					if = {
-						limit = { has_idea = BRA_idea_crippled_currency_one }
-						NOT = { has_idea = BRA_idea_crippled_currency_one }
-					}
-					else = {
-						NOT = { has_idea = BRA_idea_crippled_currency_two }
-					}
-				}
+				always = yes
 			}
 			on_add = {
 				if = {
@@ -69,6 +60,8 @@ ideas = {
 				productivity_growth_modifier = -2.5
 				maximum_migration_rate_value = -0.15
 				return_on_investment_modifier = -0.005
+			
+				consumer_goods_factor = -0.10
 			}
 			ai_will_do = {
 				factor = 1
@@ -115,43 +108,7 @@ ideas = {
 			removal_cost = -1
 			level = 4
 			available = {
-				OR = {
-					has_idea = recession
-					has_idea = stagnation
-				}
-				if = {
-					limit = { original_tag = TUR }
-					NOT = { has_idea = TUR_no_economic_plan }
-				}
-				if = {
-					limit = { original_tag = USA }
-					if = {
-						limit = {
-							OR = {
-								has_idea = USA_economic_crisis_light_idea
-								has_idea = USA_economic_crisis_medium_idea
-								has_idea = USA_economic_crisis_severe_idea
-							}
-						}
-						NOT = {
-							OR = {
-								has_idea = USA_economic_crisis_light_idea
-								has_idea = USA_economic_crisis_medium_idea
-								has_idea = USA_economic_crisis_severe_idea
-							}
-						}
-					}
-				}
-				if = {
-					limit = { original_tag = BRA }
-					if = {
-						limit = { has_idea = BRA_idea_crippled_currency_one }
-						NOT = { has_idea = BRA_idea_crippled_currency_one }
-					}
-					else = {
-						NOT = { has_idea = BRA_idea_crippled_currency_two }
-					}
-				}
+				always = yes
 			}
 			on_add = {
 				if = {
@@ -171,6 +128,8 @@ ideas = {
 				stability_factor = -0.02
 				maximum_migration_rate_value = -0.05
 				productivity_growth_modifier = -1
+			
+				consumer_goods_factor = -0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -228,43 +187,7 @@ ideas = {
 			removal_cost = -1
 			level = 3
 			available = {
-				OR = {
-					has_idea = stagnation
-					has_idea = stable_growth
-				}
-				if = {
-					limit = { original_tag = TUR }
-					NOT = { has_idea = TUR_no_economic_plan }
-				}
-				if = {
-					limit = { original_tag = USA }
-					if = {
-						limit = {
-							OR = {
-								has_idea = USA_economic_crisis_light_idea
-								has_idea = USA_economic_crisis_medium_idea
-								has_idea = USA_economic_crisis_severe_idea
-							}
-						}
-						NOT = {
-							OR = {
-								has_idea = USA_economic_crisis_light_idea
-								has_idea = USA_economic_crisis_medium_idea
-								has_idea = USA_economic_crisis_severe_idea
-							}
-						}
-					}
-				}
-				if = {
-					limit = { original_tag = BRA }
-					if = {
-						limit = { has_idea = BRA_idea_crippled_currency_one }
-						NOT = { has_idea = BRA_idea_crippled_currency_one }
-					}
-					else = {
-						NOT = { has_idea = BRA_idea_crippled_currency_two }
-					}
-				}
+				always = yes
 			}
 			on_add = {
 				if = {
@@ -347,24 +270,7 @@ ideas = {
 			removal_cost = -1
 			level = 2
 			available = {
-				OR = {
-					has_idea = stable_growth
-					has_idea = fast_growth
-				}
-				if = {
-					limit = { original_tag = TUR }
-					NOT = { has_idea = TUR_no_economic_plan }
-				}
-				if = {
-					limit = { original_tag = BRA }
-					if = {
-						limit = { has_idea = BRA_idea_crippled_currency_one }
-						NOT = { has_idea = BRA_idea_crippled_currency_one }
-					}
-					else = {
-						NOT = { has_idea = BRA_idea_crippled_currency_two }
-					}
-				}
+				always = yes
 			}
 			on_add = {
 				if = {
@@ -385,6 +291,8 @@ ideas = {
 				productivity_growth_modifier = 2
 				maximum_migration_rate_value = 0.15
 				return_on_investment_modifier = 0.005
+			
+				consumer_goods_factor = 0.10
 			}
 
 			ai_will_do = {
@@ -444,24 +352,7 @@ ideas = {
 			removal_cost = -1
 			level = 1
 			available = {
-				OR = {
-					has_idea = fast_growth
-					has_idea = economic_boom
-				}
-				if = {
-					limit = { original_tag = TUR }
-					NOT = { has_idea = TUR_no_economic_plan }
-				}
-				if = {
-					limit = { original_tag = BRA }
-					if = {
-						limit = { has_idea = BRA_idea_crippled_currency_one }
-						NOT = { has_idea = BRA_idea_crippled_currency_one }
-					}
-					else = {
-						NOT = { has_idea = BRA_idea_crippled_currency_two }
-					}
-				}
+				always = yes
 			}
 			on_add = {
 				if = {
@@ -482,6 +373,8 @@ ideas = {
 				productivity_growth_modifier = 3.5
 				maximum_migration_rate_value = 0.25
 				return_on_investment_modifier = 0.01
+			
+				consumer_goods_factor = 0.20
 			}
 			ai_will_do = {
 				factor = 1
