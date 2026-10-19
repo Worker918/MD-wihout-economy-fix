@@ -1,0 +1,8 @@
+# Millennium Dawn without Economy - custom fix
+# Global political power gain raised to +30 for every country
+
+global_political_power_boost = {
+	icon = generic_political_power
+	political_power_gain = 30
+	remove_on_death = no
+}
