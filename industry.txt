@@ -5207,7 +5207,33 @@ technologies = {
 		}
 
 		# GAMEPLAY CHANGE (Millennium Dawn without Economy): the FIRST technology of the
-		# CONSTRUCTION chain now unlocks building of ALL railway levels (rail_way + rail_terminal 1-5).
+		# CONSTRUCTION chain now unlocks building of ALL railway levels (rail_way + rail_terminal 1-5)
+		# and infrastructure construction levels 1-5.
+
+		enable_building = {
+			building = infrastructure
+			level = 1
+		}
+
+		enable_building = {
+			building = infrastructure
+			level = 2
+		}
+
+		enable_building = {
+			building = infrastructure
+			level = 3
+		}
+
+		enable_building = {
+			building = infrastructure
+			level = 4
+		}
+
+		enable_building = {
+			building = infrastructure
+			level = 5
+		}
 
 		enable_building = {
 			building = rail_way
