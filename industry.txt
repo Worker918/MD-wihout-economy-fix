@@ -5206,6 +5206,39 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		# GAMEPLAY CHANGE (Millennium Dawn without Economy): the FIRST technology of the
+		# CONSTRUCTION chain now unlocks building of ALL railway levels (rail_way + rail_terminal 1-5).
+
+		enable_building = {
+			building = rail_way
+			level = 1
+		}
+
+		enable_building = {
+			building = rail_terminal
+			level = 1
+		}
+
+		enable_building = {
+			building = rail_terminal
+			level = 2
+		}
+
+		enable_building = {
+			building = rail_terminal
+			level = 3
+		}
+
+		enable_building = {
+			building = rail_terminal
+			level = 4
+		}
+
+		enable_building = {
+			building = rail_terminal
+			level = 5
+		}
+
 		research_cost = 2
 		start_year = 1985
 		categories = {
@@ -5480,6 +5513,13 @@ technologies = {
 		path = {
 			leads_to_tech = land_fort_building_2
 			research_cost_coeff = 1
+		}
+
+		# GAMEPLAY CHANGE (Millennium Dawn without Economy): trains from MD_trains.txt are
+		# spread evenly across the CONSTRUCTION chain technologies -> train_equipment_1 unlocked here.
+
+		enable_equipments = {
+			train_equipment_1
 		}
 
 		research_cost = 2
@@ -5863,6 +5903,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		# GAMEPLAY CHANGE (Millennium Dawn without Economy): trains from MD_trains.txt are
+		# spread evenly across the CONSTRUCTION chain technologies -> train_equipment_2 unlocked here.
+
+		enable_equipments = {
+			train_equipment_2
+		}
+
 		research_cost = 2
 		start_year = 2015
 
@@ -6216,6 +6263,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		# GAMEPLAY CHANGE (Millennium Dawn without Economy): trains from MD_trains.txt are
+		# spread evenly across the CONSTRUCTION chain technologies -> train_equipment_3 unlocked here.
+
+		enable_equipments = {
+			train_equipment_3
+		}
+
 		research_cost = 2
 		start_year = 2045
 
@@ -6489,6 +6543,13 @@ technologies = {
 			leads_to_tech = excavation12
 			research_cost_coeff = 1
 		}
+		# GAMEPLAY CHANGE (Millennium Dawn without Economy): trains from MD_trains.txt are
+		# spread evenly across the CONSTRUCTION chain technologies -> train_equipment_4 unlocked here.
+
+		enable_equipments = {
+			train_equipment_4
+		}
+
 		research_cost = 2
 		start_year = 2075
 		categories = {
@@ -6654,10 +6715,6 @@ technologies = {
 		}
 	}
 	early_freight_locomotive = {
-
-		enable_equipments = {
-			train_equipment_1
-		}
 
 		path = {
 			leads_to_tech = early_high_speed_rail
@@ -6875,10 +6932,6 @@ technologies = {
 			}
 		}
 
-		enable_equipments = {
-			train_equipment_2
-		}
-
 		path = {
 			leads_to_tech = early_maglev_rail
 			research_cost_coeff = 1
@@ -7023,10 +7076,6 @@ technologies = {
 			}
 		}
 		is_special_project_tech = yes
-
-		enable_equipments = {
-			train_equipment_3
-		}
 
 		path = {
 			research_cost_coeff = 1
